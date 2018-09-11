@@ -1,37 +1,42 @@
 package week1;
-import.java.util.*;
+import java.util.*;
 
 public class Student {
 
     // TODO: khai báo các thuộc tính cho Student
-    private String name;
-    private String id;
-    private String group;
-    private String email;
+    private String name = "abc";
+    private String id = "123";
+    private String group = "group 1";
+    private String email = "abcdefgh@gmail.com";
     // TODO: khai báo các phương thức getter, setter cho Student
-
+    Scanner in = new Scanner(System.in);
     public String getName(){
         return name;
     }
 
     public void setName(String n){
         n = getName();
+        System.out.println(n);
     }
 
     public String getID(){
+
         return id;
     }
 
     public void setID(String n){
         n = getID();
+        System.out.println(n);
     }
 
     public String getGroup(){
+
         return group;
     }
 
     public void setGroup(String n){
         n = getGroup();
+        System.out.println(n);
     }
 
     public String getEmail(){
@@ -40,6 +45,7 @@ public class Student {
 
     public void setEmail(String n){
         n = getEmail();
+        System.out.println(n);
     }
     /**
      * Constructor 1
@@ -68,6 +74,6 @@ public class Student {
 
     String getInfo() {
         // TODO:
-        return null; // xóa dòng này sau khi cài đặt
+        return name + "\n" + id  + "\n" + group + "\n" + email + "\n";
     }
 }
