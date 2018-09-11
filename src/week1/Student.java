@@ -16,7 +16,7 @@ public class Student {
 
     public void setName(String n){
         n = getName();
-        System.out.println(n);
+
     }
 
     public String getID(){
@@ -26,7 +26,7 @@ public class Student {
 
     public void setID(String n){
         n = getID();
-        System.out.println(n);
+
     }
 
     public String getGroup(){
@@ -36,7 +36,7 @@ public class Student {
 
     public void setGroup(String n){
         n = getGroup();
-        System.out.println(n);
+
     }
 
     public String getEmail(){
@@ -45,7 +45,6 @@ public class Student {
 
     public void setEmail(String n){
         n = getEmail();
-        System.out.println(n);
     }
     /**
      * Constructor 1
