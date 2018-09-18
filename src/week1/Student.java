@@ -51,10 +51,10 @@ public class Student {
      */
      Student() {
         // TODO:
-        name = "Students";
-        id = "000";
-        group= "INT22041";
-        email = "uet@vnu.edu.vn";
+        this.name = "Students";
+        this.id = "000";
+        this.group= "INT22041";
+        this.email = "uet@vnu.edu.vn";
 
     }
 
@@ -68,7 +68,7 @@ public class Student {
       this.name = n;
       this.id = sid;
       this.email = em;
-      this.group = "UET22041";
+      this.group = "INT22041";
     }
 
     /**
