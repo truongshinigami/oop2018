@@ -4,10 +4,10 @@ import java.util.*;
 public class Student {
 
     // TODO: khai báo các thuộc tính cho Student
-    private String name = "abc";
-    private String id = "123";
-    private String group = "group 1";
-    private String email = "abcdefgh@gmail.com";
+    private String name ;
+    private String id;
+    private String group;
+    private String email;
     // TODO: khai báo các phương thức getter, setter cho Student
     Scanner in = new Scanner(System.in);
     public String getName(){
@@ -15,7 +15,7 @@ public class Student {
     }
 
     public void setName(String n){
-        n = getName();
+        name = n;
 
     }
 
@@ -25,7 +25,7 @@ public class Student {
     }
 
     public void setID(String n){
-        n = getID();
+        id = n;
 
     }
 
@@ -35,7 +35,7 @@ public class Student {
     }
 
     public void setGroup(String n){
-        n = getGroup();
+       group = n;
 
     }
 
@@ -44,13 +44,18 @@ public class Student {
     }
 
     public void setEmail(String n){
-        n = getEmail();
+       email = n;
     }
     /**
      * Constructor 1
      */
-    Student() {
+     Student() {
         // TODO:
+        name = "Students";
+        id = "000";
+        group= "INT22041";
+        email = "uet@vnu.edu.vn";
+
     }
 
     /**
@@ -59,8 +64,11 @@ public class Student {
      * @param sid
      * @param em
      */
-    Student(String n, String sid, String em) {
-        // TODO:
+      Student(String n, String sid, String em) {
+      this.name = n;
+      this.id = sid;
+      this.email = em;
+      this.group = "UET22041";
     }
 
     /**
@@ -69,10 +77,14 @@ public class Student {
      */
     Student(Student s) {
         // TODO:
+         this.name = s.name;
+         this.id = s.id;
+         this.group = s.group;
+         this.email = s.email;
     }
 
     String getInfo() {
         // TODO:
-        return name + "\n" + id  + "\n" + group + "\n" + email + "\n";
+        return id  + "\n" + group + "\n" + email + "\n";
     }
 }
