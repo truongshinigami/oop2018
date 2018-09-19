@@ -23,12 +23,14 @@ public class StudentManagement {
             if (this.students[i].getGroup().equals("INT22041") && this.students[i].getName() != "Students"){
 
                 System.out.println(this.students[i].getName() );
+                System.out.println(this.students[i].getInfo());
             }
         }
         System.out.println("Sinh vien thuoc nhom INT22042 : ");
         for (int i=0;i<n;i++){
             if (this.students[i].getGroup().equals("INT22042") && this.students[i].getName() != "Students"){
                                System.out.println(this.students[i].getName() );
+                               System.out.println(this.students[i].getInfo());
             }
         }
         System.out.println();
@@ -43,13 +45,13 @@ public class StudentManagement {
                 deleteloc = i;
                 break;
             }
-
+        }
             for (int j = deleteloc; j < n-1; j++) {
                 this.students[j] = this.students[j + 1];
             }
             this.students[n - 1] = null;
             n--;
-        }
+
         for (int i=0;i<n;i++)
             if (students[i].getName() != "Students" )
                System.out.println(students[i].getName());
