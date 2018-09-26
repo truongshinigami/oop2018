@@ -1,18 +1,27 @@
 package week2.task1;
+<<<<<<< HEAD
 import java.util.*;
+=======
+
+>>>>>>> origin/master
 public class Task1 {
 
     public static int gcd(int a, int b) {
         // TODO: Tính ước chung lớn nhất của 2 số a, b
+<<<<<<< HEAD
         if (b == 0)
             return a;
         else
             return gcd(b,a%b);
 
+=======
+        return 0;
+>>>>>>> origin/master
     }
 
     public static int fibonacci(int n) {
         // TODO: Tìm số fibonacci ở vị trí n
+<<<<<<< HEAD
         if (n == 0)
             return 0;
         if (n == 1)
@@ -30,5 +39,8 @@ public class Task1 {
         System.out.println(gcd(a,b));
         System.out.println(fibonacci(n));
 
+=======
+        return 0;
+>>>>>>> origin/master
     }
 }
