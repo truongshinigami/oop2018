@@ -1,8 +1,10 @@
 package week2.task3;
 
 
+
+
 public class Task3 {
-    public class GiaoVien {
+    static class GiaoVien {
         // Khai báo get set cho class
         String Name;
         int age;
@@ -37,7 +39,7 @@ public class Task3 {
     }
 
 
-    public class Meo{
+    static class Meo{
             String Country;
             String fur_color;
             String fur_type;
@@ -75,7 +77,7 @@ public class Task3 {
 
 
         }
-        public class TongThong {
+        static class TongThong {
             String Country;
             int NhiemKi;
             int NamNhiemKi;
@@ -103,10 +105,48 @@ public class Task3 {
         }
 
 
+    public static void main (String [] arg) {
 
+        String Name = "Nguyen Van A";
+        int age = 48;
+        String id = "02";
 
+        String Country1 = "Anh";
+        String fur_color = "trang";
+        String fur_type = "dai";
+        int weight = 16;
 
+        String Country2 = "My";
+        int NhiemKi = 2;
+        int NamNhiemKi = 2;
+
+        GiaoVien a = new GiaoVien(Name,age,id);
+        TongThong b = new TongThong(Country2,NhiemKi,NamNhiemKi);
+        Meo c = new Meo(Country1,fur_color,fur_type,weight);
+
+        if(a.Retired(age))
+            System.out.println("Da nghi huu");
+        else
+            System.out.println("Hien dang cong tac");
+        System.out.println(a.subject(id));
+        System.out.println("Da cong tac o truong duoc" + a.workTime(age) + "nam");
+
+        b.NuocNao(Country2);
+        if(b.TiepTucTranhCu(NhiemKi))
+            System.out.println("Duoc tiep tuc ra tranh cu");
+        else
+            System.out.println("Khong the ra tranh cu");
+        System.out.println(b.YearLeft(NamNhiemKi));
+
+        System.out.println(c.Cat_type(fur_color,fur_type,Country1));
+        if (c.overWeight(weight))
+            System.out.println("Meo thua can");
+        else
+            System.out.println("Meo khong thua can");
+        c.furOrRealweight(fur_type,weight);
     }
+    }
+
 
 
 //TODO: khai báo 3 class tương ứng với 3 đối tượng thực tế ở dưới
