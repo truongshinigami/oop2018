@@ -1,5 +1,7 @@
 package week2.task2;
 
+import javax.xml.stream.FactoryConfigurationError;
+
 public class Fraction {
 
     // TODO: khai báo các thuộc tính
@@ -56,7 +58,17 @@ public class Fraction {
             return null;
         }
 
-
+    public boolean equals(Object obj){
+        if (obj == null)
+            return false;
+        if (!(obj instanceof Fraction))
+            return false;
+        Fraction other  = (Fraction) obj;
+        if (this.numerator == other.numerator && this.denominator == other.numerator){
+            return true;
+        }
+        return false;
+    }
     public static void main(String [] abc){
         Fraction a = new Fraction(1,2);
         Fraction other = new Fraction (3,4);

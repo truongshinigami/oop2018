@@ -25,7 +25,7 @@ public class Task1 {
     }
 
     public static void  main (String [] abc){
- 
+
         System.out.println(gcd(3,10));
         System.out.println(fibonacci(5));
 
