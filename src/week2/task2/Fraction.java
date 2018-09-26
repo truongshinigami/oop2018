@@ -1,6 +1,7 @@
 package week2.task2;
 
-import javax.xml.stream.FactoryConfigurationError;
+
+import week2.task1.Task1;
 
 public class Fraction {
 
@@ -14,13 +15,18 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+    public int ToiGian(int numerator,int denominator){
+        int ucln = Task1.gcd(numerator,denominator);
+        return ucln;
+    }
         public Fraction add (Fraction other){
             // TODO: Phương thức cộng hai phân số (this và other), trả về đối tượng Fraction mới
 
             int new_numerator = (this.numerator * other.denominator) + (this.denominator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
             Fraction answer = new Fraction(new_numerator, new_denominator);
-            System.out.println(answer.numerator + "/" + answer.denominator);
+            int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
+            System.out.println(answer.numerator/toigian + "/" + answer.denominator/toigian);
 
             return null;
         }
@@ -31,7 +37,8 @@ public class Fraction {
             int new_numerator = (this.numerator * other.denominator) - (this.denominator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
             Fraction answer = new Fraction(new_numerator, new_denominator);
-            System.out.println(answer.numerator + "/" + answer.denominator);
+            int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
+            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
 
 
             return null;
@@ -43,7 +50,9 @@ public class Fraction {
             int new_numerator = (this.numerator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
             Fraction answer = new Fraction(new_numerator, new_denominator);
-            System.out.println(answer.numerator + "/" + answer.denominator);
+            int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
+
+            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
 
         return null;
         }
@@ -54,11 +63,13 @@ public class Fraction {
             int new_numerator = (this.numerator * other.denominator);
             int new_denominator = (this.denominator * other.numerator);
             Fraction answer = new Fraction(new_numerator, new_denominator);
-            System.out.println(new_numerator + "/" + new_denominator);
+            int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
+            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
             return null;
         }
 
-    public boolean equals(Object obj){
+
+        public boolean equals(Object obj){
         if (obj == null)
             return false;
         if (!(obj instanceof Fraction))
@@ -76,6 +87,10 @@ public class Fraction {
         a.subtract(other);
         a.multiply(other);
         a.divide(other);
+        if(a.equals(other))
+            System.out.println("Hai phan so bang nhau");
+        else
+            System.out.println("Hai phan so khong bang nhau");
     }
     }
 
