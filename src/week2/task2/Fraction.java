@@ -24,11 +24,8 @@ public class Fraction {
 
             int new_numerator = (this.numerator * other.denominator) + (this.denominator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
-            Fraction answer = new Fraction(new_numerator, new_denominator);
             int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
-            System.out.println(answer.numerator/toigian + "/" + answer.denominator/toigian);
-
-            return null;
+            return new Fraction(new_numerator/toigian,new_denominator/toigian);
         }
 
         public Fraction subtract (Fraction other){
@@ -36,12 +33,9 @@ public class Fraction {
             // TODO: Phương thức trừ hai phân số (this và other), trả về đối tượng Fraction
             int new_numerator = (this.numerator * other.denominator) - (this.denominator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
-            Fraction answer = new Fraction(new_numerator, new_denominator);
             int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
-            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
+            return new Fraction(new_numerator/toigian, new_denominator/toigian);
 
-
-            return null;
         }
 
         public Fraction multiply (Fraction other){
@@ -49,12 +43,9 @@ public class Fraction {
 
             int new_numerator = (this.numerator * other.numerator);
             int new_denominator = (this.denominator * other.denominator);
-            Fraction answer = new Fraction(new_numerator, new_denominator);
             int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
 
-            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
-
-        return null;
+            return new Fraction (new_numerator/toigian,new_denominator/toigian);
         }
 
         public Fraction divide (Fraction other){
@@ -62,10 +53,8 @@ public class Fraction {
 
             int new_numerator = (this.numerator * other.denominator);
             int new_denominator = (this.denominator * other.numerator);
-            Fraction answer = new Fraction(new_numerator, new_denominator);
             int toigian = ToiGian(Math.abs(new_numerator),Math.abs(new_denominator));
-            System.out.println((answer.numerator/toigian) + "/" + (answer.denominator/toigian));
-            return null;
+            return new Fraction (new_numerator/toigian,new_denominator/toigian);
         }
 
 
