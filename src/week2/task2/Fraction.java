@@ -70,24 +70,24 @@ public class Fraction {
 
 
         public boolean equals(Object obj){
-        if (obj == null)
-            return false;
-        if (!(obj instanceof Fraction))
-            return false;
         Fraction other  = (Fraction) obj;
-        if (this.numerator == other.numerator && this.denominator == other.numerator){
+        int toigian_1 = ToiGian(this.numerator,this.denominator);
+        int toigian_2 = ToiGian(other.numerator,other.denominator);
+        if ((this.numerator/toigian_1) == (other.numerator/toigian_2) && (this.denominator/toigian_1) == (other.denominator/toigian_2)){
             return true;
         }
+        else
         return false;
     }
     public static void main(String [] abc){
         Fraction a = new Fraction(1,2);
-        Fraction other = new Fraction (3,4);
+        Fraction b = new Fraction (6, 8);
+        Fraction other = new Fraction (12,16);
         a.add(other);
         a.subtract(other);
         a.multiply(other);
         a.divide(other);
-        if(a.equals(other))
+        if(b.equals(other))
             System.out.println("Hai phan so bang nhau");
         else
             System.out.println("Hai phan so khong bang nhau");
