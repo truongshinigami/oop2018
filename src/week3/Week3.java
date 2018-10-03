@@ -34,7 +34,7 @@ public class Week3 {
              s = "Thieu Can";
          else if (BMI <=23.99 && BMI >= 18.5)
              s = "Binh Thuong";
-         else if (BMI <= 24.99 && BMI >=24.99)
+         else if (BMI <= 24.99 && BMI >=25.99)
              s = "Thua Can";
         else
             s = "Beo Phi";
