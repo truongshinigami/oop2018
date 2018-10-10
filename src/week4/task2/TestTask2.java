@@ -5,6 +5,7 @@ package week4.task2;
  */
 public class TestTask2 {
     public static void main(String [] abc){
+        /**
         //rectangle
         Rectangle a = new Rectangle();
         a.Width = 1.0;
@@ -31,5 +32,14 @@ public class TestTask2 {
         }
         else
             System.out.print("Shape isn't be filled");
+         */
+        Circle a = new Circle();
+        System.out.println(a.toString() +"\n");
+        Rectangle b = new Rectangle();
+        System.out.println(b.toString() + "\n");
+        Shape c = new Shape();
+        System.out.println(c.toString() + "\n");
+        Square d = new Square();
+        System.out.println(d.toString() + "\n");
     }
 }
