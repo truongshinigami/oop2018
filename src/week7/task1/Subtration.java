@@ -1,9 +1,12 @@
 package week7.task1;
 
-public class Addition extends BinaryExpression{
-      Expression left;
-      Expression right;
-    Addition(Expression _left,Expression _right){
+/**
+ * Created by CCNE on 31/10/2018.
+ */
+public class Subtration extends BinaryExpression{
+    Expression left;
+    Expression right;
+    Subtration(Expression _left,Expression _right){
         this.left = _left;
         this.right = _right;
     }
@@ -18,14 +21,13 @@ public class Addition extends BinaryExpression{
         return this.right;
     }
 
-
     @Override
     public int evaluate() {
-        return this.left.evaluate() + this.right.evaluate();
+        return this.left.evaluate() - this.right.evaluate();
     }
 
     @Override
     public String toString() {
-        return this.left.toString() + "+" + this.right.toString();
+        return this.left.toString() + "-" + this.right.toString();
     }
 }
