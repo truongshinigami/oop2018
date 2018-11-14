@@ -36,19 +36,39 @@ public class Task1 {
         }
         return abc;
     }
-    public String findFunctionByName(String name){
-        String str="";
+    List<String> getFunctionsName(File path) throws Exception {
+        List<String> abc = new ArrayList<>();
+        Scanner sc = new Scanner(path);
+        while (sc.hasNextLine()) {
+            String line = sc.nextLine();
+            int i = line.indexOf("static");
+            if (i != -1) {
+                    abc.add(line);
 
-        return str;
+            }
+        }
+        return abc;
+    }
+    public String findFunctionByName(String name) throws Exception{
+        int i = name.indexOf("(");
+        String str = name.substring(0,i);
+        List<String> list = new Task1().getFunctionsName(new File("src/week9/Utils.java"));
+        for (int j = 0;j<list.size();j++){
+
+            if (list.get(j).contains(str))
+                return "true";
+        }
+        return "false";
     }
     public static void main(String [] abc) throws Exception{
         String a = "src/week9/Utils.java";
-        List<String> list = new Task1().getAllFunctions(new File(a));
 
+        List<String> list = new Task1().getAllFunctions(new File(a));
         for (int i = 0;i<list.size();i++){
-            String str = list.get(i);
+           String str = list.get(i);
+
             System.out.println(str);
         }
-
+        System.out.println(new Task1().findFunctionByName("addContentToFile(String)"));
     }
 }
