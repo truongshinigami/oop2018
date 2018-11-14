@@ -26,10 +26,7 @@ public class Utils {
         String inStr = in.nextLine();
         try{
             File inputFile = new File(path);
-            BufferedWriter file1 = new BufferedWriter(new FileWriter(inputFile,true));
-            BufferedWriter file2 = new BufferedWriter(new FileWriter(inputFile,true));
-            file1.write("");
-            file1.close();
+            BufferedWriter file2 = new BufferedWriter(new FileWriter(inputFile));
             file2.write(inStr);
             file2.close();
 
@@ -46,10 +43,24 @@ public class Utils {
         try{
             File inputFile = new File(path);
             BufferedWriter file1 = new BufferedWriter(new FileWriter(inputFile,true));
-            file1.append(inStr);
+            file1.append("\n"+inStr);
             file1.close();
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+    public static File findFileByName(String folderPath, String fileName){
+        File file1 = new File(folderPath+"/"+fileName);
+        return file1.exists() ? file1 : null;
+    }
+    public static void main(String []abc){
+        String a = "src/week9/test.txt";
+        String folderPath = "src/week9";
+        String fileNae = "abcd.txt";
+        // doc file
+       // readContentFromFile(a);
+        //writeContentToFile(a);
+        //addContentToFile(a);
+        System.out.print(findFileByName(folderPath,fileNae));
     }
 }
